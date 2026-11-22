@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Docker Commands and Git Workflow</title>
+  <desc id="desc">A quick reference guide to common Docker commands and a basic GitHub workflow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1220"/><stop offset="1" stop-color="#172d42"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#29b6f6"/><stop offset="1" stop-color="#72e0c1"/></linearGradient>
+    <style>
+      text{font-family:Inter,Arial,sans-serif;fill:#edf5fb}.muted{fill:#a9bdcb}.section{font-size:25px;font-weight:700;letter-spacing:2px;fill:#72e0c1}.label{font-size:19px;font-weight:700;fill:#c5d7e4}.cmd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:19px;fill:#fff}.small{font-size:17px}.title{font-size:53px;font-weight:800;letter-spacing:-1px}.sub{font-size:22px}
+    </style>
+  </defs>
+  <rect width="1200" height="1600" fill="url(#bg)"/>
+  <circle cx="1090" cy="60" r="180" fill="#29b6f6" opacity=".08"/><circle cx="30" cy="1450" r="240" fill="#72e0c1" opacity=".06"/>
+  <rect x="72" y="68" width="8" height="100" rx="4" fill="url(#accent)"/>
+  <text x="105" y="112" class="title">DOCKER + GIT</text><text x="105" y="157" class="sub muted">Essential commands · quick reference</text>
+  <rect x="72" y="205" width="1056" height="52" rx="14" fill="#1b354b"/><text x="98" y="240" class="small muted">Replace values in &lt;angle brackets&gt; with your own names and paths.</text>
+  <text x="80" y="315" class="section">01 / DOCKER</text>
+  <rect x="72" y="342" width="1056" height="480" rx="22" fill="#101d2a" stroke="#345168"/>
+  <text x="105" y="390" class="label">IMAGES</text>
+  <text x="105" y="430" class="cmd">docker pull nginx</text><text x="550" y="430" class="small muted">Download an image</text>
+  <text x="105" y="472" class="cmd">docker images</text><text x="550" y="472" class="small muted">List local images</text>
+  <text x="105" y="514" class="cmd">docker build -t my-app .</text><text x="550" y="514" class="small muted">Build from a Dockerfile</text>
+  <line x1="105" y1="543" x2="1095" y2="543" stroke="#294154"/>
+  <text x="105" y="582" class="label">CONTAINERS</text>
+  <text x="105" y="622" class="cmd">docker run -d -p 8080:80 nginx</text><text x="105" y="650" class="small muted">Run in background; map host port 8080 to container port 80</text>
+  <text x="105" y="696" class="cmd">docker ps</text><text x="550" y="696" class="small muted">List running containers</text>
+  <text x="105" y="738" class="cmd">docker ps -a</text><text x="550" y="738" class="small muted">List all containers</text>
+  <text x="105" y="780" class="cmd">docker logs &lt;container&gt;</text><text x="550" y="780" class="small muted">View container output</text>
+  <text x="80" y="882" class="section">02 / GIT &amp; GITHUB</text>
+  <rect x="72" y="909" width="1056" height="554" rx="22" fill="#101d2a" stroke="#345168"/>
+  <text x="105" y="958" class="label">START A LOCAL REPOSITORY</text>
+  <text x="105" y="998" class="cmd">git init</text><text x="550" y="998" class="small muted">Initialize Git in this folder</text>
+  <text x="105" y="1040" class="cmd">git add .</text><text x="550" y="1040" class="small muted">Stage files for commit</text>
+  <text x="105" y="1082" class="cmd">git commit -m "Initial commit"</text><text x="105" y="1110" class="small muted">Save a snapshot of staged changes</text>
+  <line x1="105" y1="1134" x2="1095" y2="1134" stroke="#294154"/>
+  <text x="105" y="1174" class="label">CONNECT TO A NEW GITHUB REPOSITORY</text>
+  <text x="105" y="1214" class="cmd">git branch -M main</text>
+  <text x="105" y="1256" class="cmd">git remote add origin https://github.com/&lt;user&gt;/&lt;repo&gt;.git</text>
+  <text x="105" y="1298" class="cmd">git push -u origin main</text><text x="550" y="1298" class="small muted">Publish the main branch</text>
+  <line x1="105" y1="1327" x2="1095" y2="1327" stroke="#294154"/>
+  <text x="105" y="1366" class="label">LATER UPDATES</text>
+  <text x="105" y="1406" class="cmd">git add . &amp;&amp; git commit -m "Describe changes" &amp;&amp; git push</text>
+  <rect x="72" y="1490" width="1056" height="2" fill="url(#accent)"/>
+  <text x="80" y="1534" class="small muted">Tip: create an empty repository on GitHub first, then connect it with the commands above.</text>
+  <text x="80" y="1570" class="small muted">Docker packages apps in containers · Git tracks changes · GitHub hosts Git repositories</text>
+</svg>
